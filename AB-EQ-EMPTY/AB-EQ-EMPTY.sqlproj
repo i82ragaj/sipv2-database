@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>AB_EQ_EMPTY</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{6b42ad38-5100-44f3-a059-652195ec7285}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>AB_EQ_EMPTY</RootNamespace>
+    <AssemblyName>AB_EQ_EMPTY</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="tmp\" />
+    <Folder Include="tmp\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\MDArticle.sql" />
+    <Build Include="dbo\Tables\MDCounter.sql" />
+    <Build Include="dbo\Tables\MDClientUser.sql" />
+    <Build Include="dbo\Tables\MDClient.sql" />
+    <Build Include="dbo\Tables\MDDevice.sql" />
+    <Build Include="dbo\Tables\MDOperator.sql" />
+    <Build Include="dbo\Tables\MDPaymentType.sql" />
+    <Build Include="dbo\Tables\MDSystemEvent.sql" />
+    <Build Include="dbo\Tables\TRCounterReg.sql" />
+    <Build Include="dbo\Tables\TRDailyTotal.sql" />
+    <Build Include="dbo\Tables\TRShift.sql" />
+    <Build Include="dbo\Tables\TRInvoice.sql" />
+    <Build Include="dbo\Tables\MDDeviceType.sql" />
+    <Build Include="dbo\Tables\MDConceptType.sql" />
+    <Build Include="tmp\Tables\Zc_ins.sql" />
+    <Build Include="tmp\Tables\Ztar.sql" />
+    <Build Include="tmp\Tables\Ztmp.sql" />
+    <Build Include="dbo\Tables\TRSystemEventReg.sql" />
+    <Build Include="dbo\Tables\TRParkingTrans.sql" />
+    <Build Include="dbo\Tables\MDClientUserCard.sql" />
+    <Build Include="dbo\Tables\TRMovement.sql" />
+    <Build Include="dbo\Tables\TRPayment.sql" />
+    <Build Include="tmp\Tables\MovementsTmp.sql" />
+    <Build Include="tmp\Tables\ParkingTransTmp.sql" />
+    <Build Include="tmp\Tables\Zinc.sql" />
+    <Build Include="tmp\Tables\Ztur.sql" />
+    <Build Include="tmp\Tables\Zcob.sql" />
+    <Build Include="tmp\Tables\Zdetcob.sql" />
+    <Build Include="tmp\Tables\Zentsal.sql" />
+    <Build Include="dbo\Functions\GetUniqueTransNo.sql" />
+    <Build Include="Security\tmp.sql" />
+  </ItemGroup>
+</Project>

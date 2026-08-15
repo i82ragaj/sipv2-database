@@ -1,0 +1,47 @@
+﻿CREATE TABLE [tmp].[ZPayment] (
+    [RecType]                     TINYINT         NULL,
+    [CirculatoryTitleType]        INT             NULL,
+    [TitleId]                     VARCHAR (40)    NULL,
+    [CarLicensePlate]             VARCHAR (40)    NULL,
+    [ExternalSupport]             VARCHAR (40)    NULL,
+    [ExternalSupportType]         INT             NULL,
+    [PaymentOperationType]        INT             NULL,
+    [PaymentOperationUserCod]     VARCHAR (40)    NULL,
+    [PaymentOperationUserName]    VARCHAR (100)   NULL,
+    [DateTimePaymentStart]        DATETIME        NULL,
+    [DateTimePaymentEnd]          DATETIME        NULL,
+    [PaidTimeInMin]               INT             NULL,
+    [DateTimePayment]             DATETIME        NULL,
+    [TerminalMeyparID]            VARCHAR (40)    NULL,
+    [TerminalCodExt]              VARCHAR (40)    NULL,
+    [TerminalName]                NVARCHAR (100)  NULL,
+    [TerminalType]                INT             NULL,
+    [TerminalTypeName]            NVARCHAR (100)  NULL,
+    [PaymentId]                   VARCHAR (40)    NULL,
+    [PaymentConceptNumber]        INT             NULL,
+    [RepaymentNumber]             INT             NULL,
+    [ReceiptSerialId]             VARCHAR (40)    NULL,
+    [ReceiptSequenceId]           INT             NULL,
+    [DiscountId]                  VARCHAR (40)    NULL,
+    [DiscountTemplateCod]         VARCHAR (40)    NULL,
+    [DiscountTemplateName]        VARCHAR (100)   NULL,
+    [DiscountType]                VARCHAR (40)    NULL,
+    [VehicleType]                 INT             NOT NULL,
+    [AmountPriceStay]             DECIMAL (18, 4) NULL,
+    [AmountDiscount]              DECIMAL (18, 4) NULL,
+    [AmountPaid]                  DECIMAL (18, 4) NULL,
+    [PaymentMethod1Type]          INT             NULL,
+    [PaymentMethod1Amount]        DECIMAL (18, 4) NULL,
+    [PaymentMethod1CCType]        INT             NULL,
+    [PaymentMethod1CCPANWithMasc] VARCHAR (40)    NULL,
+    [PaymentMethod2Type]          INT             NULL,
+    [PaymentMethod2Amount]        DECIMAL (18, 4) NULL,
+    [PaymentMethod2CCType]        INT             NULL,
+    [PaymentMethod2CCPANWithMasc] VARCHAR (40)    NULL
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_ZPayment]
+    ON [tmp].[ZPayment]([PaymentId] ASC, [PaymentConceptNumber] ASC);
+

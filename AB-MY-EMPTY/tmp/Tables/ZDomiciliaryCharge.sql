@@ -1,0 +1,28 @@
+﻿CREATE TABLE [tmp].[ZDomiciliaryCharge] (
+    [RecType]                    TINYINT         NULL,
+    [CirculatoryTitleType]       INT             NULL,
+    [TitleId]                    VARCHAR (40)    NULL,
+    [PaymentOperationType]       INT             NULL,
+    [PaymentOperationUserCod]    VARCHAR (40)    NULL,
+    [PaymentOperationDescrip]    NVARCHAR (200)  NULL,
+    [DateTimeIssue]              DATETIME        NULL,
+    [DateTimeCharge]             DATETIME        NULL,
+    [SubscriberContractMeyparId] VARCHAR (40)    NULL,
+    [SubscriberContractCodExt]   VARCHAR (40)    NULL,
+    [ClientMeyparId]             VARCHAR (40)    NULL,
+    [ClientCodExt]               VARCHAR (40)    NULL,
+    [ClientName]                 NVARCHAR (100)  NULL,
+    [ClientSurname1]             NVARCHAR (100)  NULL,
+    [ClientSurname2]             VARCHAR (100)   NULL,
+    [ClientIdenTaxModelType]     INT             NULL,
+    [ClientIdenDocumentType]     INT             NULL,
+    [ClientIdenDocument]         VARCHAR (40)    NULL,
+    [SubscriberProductMeyparId]  VARCHAR (40)    NULL,
+    [SubscriberProductCodExt]    VARCHAR (40)    NULL,
+    [SubscriberProductName]      NVARCHAR (100)  NULL,
+    [CarLicensePlate]            VARCHAR (40)    NULL,
+    [VehicleType]                INT             NULL,
+    [AmountChargePaid]           DECIMAL (18, 4) NULL,
+    [ChargeModeType]             VARCHAR (40)    NULL
+);
+

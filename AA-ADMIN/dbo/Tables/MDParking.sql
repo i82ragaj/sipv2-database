@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[MDParking] (
+    [ID]             VARCHAR (10)   NOT NULL,
+    [Active]         BIT            CONSTRAINT [DF__MDParking__Activ__3B75D760] DEFAULT ((1)) NOT NULL,
+    [CreatedBy]      NVARCHAR (50)  CONSTRAINT [DF_MDParking_CreatedBy] DEFAULT (N'system') NULL,
+    [UpdatedBy]      NVARCHAR (50)  CONSTRAINT [DF_MDParking_UpdatedBy] DEFAULT (N'system') NULL,
+    [Created]        DATETIME       NULL,
+    [Updated]        DATETIME       NULL,
+    [Type]           VARCHAR (10)   NOT NULL,
+    [SRV]            VARCHAR (10)   NULL,
+    [Name]           NVARCHAR (100) NULL,
+    [Company]        NVARCHAR (100) NULL,
+    [DACode]         VARCHAR (10)   NULL,
+    [DateFromTable]  DATE           NULL,
+    [DateToTable]    DATE           NULL,
+    [NDays]          INT            NULL,
+    [TruncateTables] BIT            NULL,
+    [SII]            BIT            CONSTRAINT [DF__MDParking__SII__3A81B327] DEFAULT ((0)) NULL,
+    [MultiCounter]   BIT            NULL,
+    [ServerIP]       VARCHAR (20)   NULL,
+    [Job]            VARCHAR (100)  NULL,
+    [LoadDate]       TIME (7)       NULL,
+    [Frecuency]      VARCHAR (1)    CONSTRAINT [DF__MDParking__Frecu__3C69FB99] DEFAULT ('N') NULL,
+    CONSTRAINT [PK_MDParking] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

@@ -1,0 +1,28 @@
+﻿CREATE TABLE [tmp].[Zdetcob] (
+    [codins]    SMALLINT        NOT NULL,
+    [codcob]    VARCHAR (20)    NOT NULL,
+    [ord]       SMALLINT        NOT NULL,
+    [codtipcon] SMALLINT        NOT NULL,
+    [can]       INT             NOT NULL,
+    [tie]       DATETIME        NOT NULL,
+    [imp]       DECIMAL (18, 4) NOT NULL,
+    [tietot]    DATETIME        NOT NULL,
+    [imptot]    DECIMAL (18, 4) NULL,
+    [codtipsop] SMALLINT        NULL,
+    [idepro]    VARCHAR (20)    NULL,
+    [codinspro] SMALLINT        NULL,
+    [numpro]    VARCHAR (12)    NULL,
+    [codgrupro] SMALLINT        NULL,
+    [entest]    DATETIME        NULL,
+    [pagest]    DATETIME        NULL,
+    [codtar]    SMALLINT        NULL,
+    [mat]       VARCHAR (12)    NULL,
+    [exp]       SMALLINT        NOT NULL,
+    [verpro]    SMALLINT        NULL,
+    [codinscli] SMALLINT        NULL,
+    [codcli]    INT             NULL,
+    [mos]       VARCHAR (60)    NULL,
+    [salcon]    VARCHAR (20)    NULL,
+    [saldis]    VARCHAR (20)    NULL
+);
+

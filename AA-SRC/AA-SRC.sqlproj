@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>AA_SRC</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b7c23e87-cf14-4ce6-b464-565daa058ccf}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>AA_SRC</RootNamespace>
+    <AssemblyName>AA_SRC</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="SD\" />
+    <Folder Include="SD\Functions\" />
+    <Folder Include="EQ\" />
+    <Folder Include="EQ\Functions\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="SD\Stored Procedures\" />
+    <Folder Include="EQ\Stored Procedures\" />
+    <Folder Include="AA\" />
+    <Folder Include="AA\Stored Procedures\" />
+    <Folder Include="Security\" />
+    <Folder Include="MY\" />
+    <Folder Include="MY\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="SD\Functions\getCustomPhysLoc.sql" />
+    <Build Include="SD\Functions\GetUniqueTransNo.sql" />
+    <Build Include="EQ\Functions\getCustomPhysLoc.sql" />
+    <Build Include="EQ\Functions\GetUniqueTransNo.sql" />
+    <Build Include="dbo\Functions\getCustomPhysLoc.sql" />
+    <Build Include="dbo\Functions\GetUniqueTransNo.sql" />
+    <Build Include="SD\Stored Procedures\DailyTask.sql" />
+    <Build Include="SD\Stored Procedures\InsertSystemEventReg.sql" />
+    <Build Include="SD\Stored Procedures\InsertTransactionalData.sql" />
+    <Build Include="SD\Stored Procedures\InsertZTables.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeArticle.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeClient.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeConfig.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeClientUserCard.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeCounter.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeDevice.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeOperator.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeSystemEvent.sql" />
+    <Build Include="SD\Stored Procedures\SynchronizeClientUser.sql" />
+    <Build Include="EQ\Stored Procedures\SSIS-GenerateDateIntervals.sql" />
+    <Build Include="EQ\Stored Procedures\SSIS-InitDailyTask.sql" />
+    <Build Include="EQ\Stored Procedures\SSIS-InsertSystemEventReg.sql" />
+    <Build Include="EQ\Stored Procedures\SSIS-InsertTransactionalData.sql" />
+    <Build Include="AA\Stored Procedures\MoveDataToHistory.sql" />
+    <Build Include="AA\Stored Procedures\TruncateTables.sql" />
+    <Build Include="SD\Stored Procedures\InsertParkingCounter.sql" />
+    <Build Include="SD\Stored Procedures\InsertParkingTotals.sql" />
+    <Build Include="AA\Stored Procedures\InsertAllParkingCounters.sql" />
+    <Build Include="AA\Stored Procedures\InsertAllParkingTotals.sql" />
+    <Build Include="Security\AA.sql" />
+    <Build Include="Security\EQ.sql" />
+    <Build Include="Security\SD.sql" />
+    <Build Include="AA\Stored Procedures\SSIS-PostDailyTask.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeClientUserCard.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeClientUser.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeClient.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeArticle.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeConfig.sql" />
+    <Build Include="MY\Stored Procedures\SSIS-ParkingTotals.sql" />
+    <Build Include="MY\Stored Procedures\SSIS-InitDailyTask.sql" />
+    <Build Include="MY\Stored Procedures\SSIS-GenerateDateIntervals.sql" />
+    <Build Include="MY\Stored Procedures\SSIS-InsertTransactionalData.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeSystemEvent.sql" />
+    <Build Include="MY\Stored Procedures\SSIS-InsertSystemEventReg.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeOperator.sql" />
+    <Build Include="MY\Stored Procedures\SynchronizeDevice.sql" />
+    <Build Include="Security\MY.sql" />
+    <Build Include="AA\Stored Procedures\DeleteClientsOldInformation.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,34 @@
+<Solution>
+  <Project Path="AA-ADMIN/AA-ADMIN.sqlproj" Id="c067755f-42ce-40c6-9688-0ac5fea0560a">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AA-CONTO/AA-CONTO.sqlproj" Id="3e5b5fed-3932-4c83-b120-3eefc848002f">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AA-ERPINT/AA-ERPINT.sqlproj" Id="09aef331-86ec-4972-b1f7-78db51121a8b">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AA-SRC/AA-SRC.sqlproj" Id="b7c23e87-cf14-4ce6-b464-565daa058ccf">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AB-EQ-EMPTY/AB-EQ-EMPTY.sqlproj" Id="6b42ad38-5100-44f3-a059-652195ec7285">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AB-MY-EMPTY/AB-MY-EMPTY.sqlproj" Id="e538cf52-1217-4dfb-9d7b-9c22a08c0bf2">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AB-SD-EMPTY/AB-SD-EMPTY.sqlproj" Id="40b8c5bc-0500-40f1-a8b0-5638cc144666">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ALLPK/ALLPK.sqlproj" Id="1a57b5d0-a564-479d-a585-8bb88019e661">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>

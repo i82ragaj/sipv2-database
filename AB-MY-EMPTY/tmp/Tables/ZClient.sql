@@ -1,0 +1,28 @@
+﻿CREATE TABLE [tmp].[ZClient] (
+    [RecType]                TINYINT        NULL,
+    [DateTimeRecord]         DATETIME       NULL,
+    [ClientMeyparId]         VARCHAR (40)   NULL,
+    [ClientCodExt]           VARCHAR (40)   NULL,
+    [ClientName]             VARCHAR (100)  NULL,
+    [ClientSurname1]         VARCHAR (100)  NULL,
+    [ClientSurname2]         VARCHAR (100)  NULL,
+    [ClientIdenTaxModelType] INT            NULL,
+    [ClientIdenDocumentType] INT            NULL,
+    [ClientIdenDocument]     VARCHAR (40)   NULL,
+    [RegistrationDate]       DATETIME       NULL,
+    [TerminationIs]          INT            NULL,
+    [TerminationDate]        DATETIME       NULL,
+    [ClientEmail]            VARCHAR (100)  NULL,
+    [ClientAddress]          VARCHAR (100)  NULL,
+    [ClientCity]             VARCHAR (100)  NULL,
+    [ClientProvince]         VARCHAR (100)  NULL,
+    [ClientCountry]          VARCHAR (100)  NULL,
+    [ClientPostalCode]       VARCHAR (40)   NULL,
+    [ClientPhone]            VARCHAR (40)   NULL,
+    [BankName]               NVARCHAR (100) NULL,
+    [BankIBAN]               NVARCHAR (40)  NULL,
+    [BankBIC]                NVARCHAR (40)  NULL,
+    [BankAccountHolder]      NVARCHAR (40)  NULL,
+    [Observations]           NVARCHAR (200) NULL
+);
+

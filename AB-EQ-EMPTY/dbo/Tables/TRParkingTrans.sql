@@ -1,0 +1,55 @@
+﻿CREATE TABLE [dbo].[TRParkingTrans] (
+    [ParkingTransID]      VARCHAR (50)    NOT NULL,
+    [ParkingTransTime]    DATETIME        NOT NULL,
+    [ParkingTransType]    VARCHAR (10)    NOT NULL,
+    [PaymentDeviceID]     VARCHAR (40)    NULL,
+    [PaymentDeviceCode]   VARCHAR (20)    NULL,
+    [PaymentDeviceName]   NVARCHAR (50)   NULL,
+    [PaymentDeviceTypeID] VARCHAR (40)    NULL,
+    [OperatorID]          VARCHAR (40)    NULL,
+    [OperatorName]        NVARCHAR (50)   NULL,
+    [OperatorSurname]     NVARCHAR (50)   NULL,
+    [ArticleID]           VARCHAR (40)    NULL,
+    [ArticleCode]         VARCHAR (20)    NULL,
+    [ArticleName]         NVARCHAR (50)   NULL,
+    [ArticleCategory]     NVARCHAR (50)   NULL,
+    [ArticleType]         VARCHAR (20)    NULL,
+    [SerialNo]            VARCHAR (50)    NULL,
+    [EntryTime]           DATETIME        NULL,
+    [EntryDeviceID]       VARCHAR (40)    NULL,
+    [EntryDeviceName]     NVARCHAR (50)   NULL,
+    [EntryPlate]          VARCHAR (20)    NULL,
+    [ExitTime]            DATETIME        NULL,
+    [ExitDeviceID]        VARCHAR (40)    NULL,
+    [ExitDeviceName]      NVARCHAR (50)   NULL,
+    [ExitPlate]           VARCHAR (20)    NULL,
+    [ParkingDuration]     INT             NULL,
+    [RateNo]              VARCHAR (40)    NULL,
+    [RateName]            NVARCHAR (50)   NULL,
+    [TransactionNo]       VARCHAR (20)    NULL,
+    [InvoiceNo]           VARCHAR (20)    NULL,
+    [Revenue]             DECIMAL (18, 4) NULL,
+    [NetRevenue]          DECIMAL (18, 4) NULL,
+    [RevenueExt]          DECIMAL (18, 4) NULL,
+    [TaxId]               VARCHAR (40)    NULL,
+    [TaxName]             NVARCHAR (50)   NULL,
+    [PaymentTypeID]       VARCHAR (40)    NULL,
+    [ConceptTypeID]       VARCHAR (40)    NULL,
+    [Remarks]             NVARCHAR (100)  NULL,
+    [Inserted]            DATETIME        NOT NULL
+);
+
+
+
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_TRParkingTrans-ID]
+    ON [dbo].[TRParkingTrans]([ParkingTransID] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_TRParkingTrans-Time]
+    ON [dbo].[TRParkingTrans]([ParkingTransTime] ASC);
+
