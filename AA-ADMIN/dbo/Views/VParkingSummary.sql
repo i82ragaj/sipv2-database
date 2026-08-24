@@ -24,6 +24,4 @@ SELECT [IDPK] + '_' + CAST([Date] as varchar) ID
       ,[CashNum]
       ,[RestTotal]
       ,[RestNum]
-      ,null [DiscountTotal]
-      ,null [DiscountNum]
   FROM [AA-ERPINT].[dbo].[ParkingSummary]

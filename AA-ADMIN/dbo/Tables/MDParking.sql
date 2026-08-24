@@ -20,6 +20,7 @@
     [Job]            VARCHAR (100)  NULL,
     [LoadDate]       TIME (7)       NULL,
     [Frecuency]      VARCHAR (1)    CONSTRAINT [DF__MDParking__Frecu__3C69FB99] DEFAULT ('N') NULL,
-    CONSTRAINT [PK_MDParking] PRIMARY KEY CLUSTERED ([ID] ASC)
+    CONSTRAINT [PK_MDParking] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_MDParking_MDParkingType] FOREIGN KEY ([Type]) REFERENCES [dbo].[MDParkingType] ([Id])
 );
 

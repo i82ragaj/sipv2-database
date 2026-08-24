@@ -87,5 +87,7 @@
     <Build Include="dbo\Stored Procedures\AllpkRefreshConfigHistory.sql" />
     <Build Include="dbo\Stored Procedures\AllpkJoinTable.sql" />
     <Build Include="dbo\Stored Procedures\AllpkGenerate.sql" />
+    <Build Include="dbo\Tables\MDParkingType.sql" />
+    <Build Include="dbo\Views\VDailyTotal.sql" />
   </ItemGroup>
 </Project>

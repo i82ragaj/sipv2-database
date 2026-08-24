@@ -41,7 +41,7 @@ BEGIN TRY
 	if(@TruncateTables = 1)
 		EXEC [AA].[TruncateTables] @DBNAME
 		
-	UPDATE [AA-ADMIN].[dbo].[MDParking] set LastImportedStatus = 'INICIADA' where ID = @DBNAME
+	UPDATE [AA-ADMIN].[dbo].[MDParkingStatus] set LastImportedStatus = 'INICIADA' where ID = @DBNAME
 
 	EXEC [SD].[SynchronizeConfig] @PKSRV, @DBNAME;
 	EXEC [SD].[InsertZTables] @PKSRV, @DBNAME, @datefrom, @dateto;
@@ -49,7 +49,7 @@ BEGIN TRY
 	EXEC [SD].[InsertSystemEventReg] @PKSRV, @DBNAME;
 	EXEC [SD].[InsertTransactionalData] @DBNAME, @datefrom;
 
-	UPDATE [AA-ADMIN].[dbo].[MDParking] set LastImported = getdate(), LastImportedStatus = 'OK', LastImportedOK = getdate(), LastImportedDuration =  getdate() - @dateinit where ID = @DBNAME
+	UPDATE [AA-ADMIN].[dbo].[MDParkingStatus] set LastImported = getdate(), LastImportedStatus = 'OK', LastImportedOK = getdate(), LastImportedDuration =  getdate() - @dateinit where ID = @DBNAME
 
 	INSERT INTO [AA-ADMIN].[dbo].[TRImportProcess]([ID],[IDPK],[Begin],[End],[Duration],[Status],[Description])
 	VALUES (NEWID(), @DBNAME, @dateinit, getdate(), getdate() - @dateinit, 'OK', '')
@@ -58,7 +58,7 @@ END TRY
 
 
 BEGIN CATCH
-	UPDATE [AA-ADMIN].[dbo].[MDParking] set LastImported = getdate(), LastImportedStatus = 'ERROR', LastImportedDuration =  getdate() - @dateinit where ID = @DBNAME
+	UPDATE [AA-ADMIN].[dbo].[MDParkingStatus] set LastImported = getdate(), LastImportedStatus = 'ERROR', LastImportedDuration =  getdate() - @dateinit where ID = @DBNAME
     
 	INSERT INTO [AA-ADMIN].[dbo].[TRImportProcess]([ID],[IDPK],[Begin],[End],[Duration],[Status],[Description])
 	VALUES (NEWID(), @DBNAME, @dateinit, getdate(), getdate() - @dateinit, 'ERROR', ERROR_MESSAGE())
