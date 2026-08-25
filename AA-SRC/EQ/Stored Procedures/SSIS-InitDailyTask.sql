@@ -36,7 +36,7 @@ BEGIN
 
 	exec(@sql);
 
-	UPDATE [AA-ADMIN].[dbo].[MDParking] set LastImportedStatus = 'INICIADA' where ID = @DBNAME
+	UPDATE [AA-ADMIN].[dbo].[MDParkingStatus] set LastImportedStatus = 'INICIADA' where ID = @DBNAME
 
 
 END
