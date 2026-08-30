@@ -10,8 +10,11 @@
     [CounterName]    NVARCHAR (50)    NULL,
     [OccupancyLimit] SMALLINT         NULL,
     [CounterType]    VARCHAR (10)     NULL,
-    CONSTRAINT [PK_MDCounterConfig] PRIMARY KEY CLUSTERED ([ID] ASC)
+    CONSTRAINT [PK_MDCounterConfig] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_MDCounterConfig_MDParking] FOREIGN KEY ([IDPK]) REFERENCES [dbo].[MDParking] ([ID])
 );
+
+
 
 
 GO

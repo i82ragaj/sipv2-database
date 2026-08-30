@@ -11,6 +11,7 @@
     [LastCountTotals]       DATETIME      NULL,
     [LastCountTotalsStatus] DATETIME      NULL,
     [LastImportedDuration]  DATETIME      NULL,
-    CONSTRAINT [PK_MDParkingStatus] PRIMARY KEY CLUSTERED ([ID] ASC)
+    CONSTRAINT [PK_MDParkingStatus] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_MDParkingStatus_MDParking] FOREIGN KEY ([ID]) REFERENCES [dbo].[MDParking] ([ID])
 );
 
